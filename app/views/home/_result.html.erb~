@@ -1,0 +1,14 @@
+<!-- the content of the result to be displayed -->
+
+<% if @result.nil? %>
+  <h3>Please provide the required inputs</h3>   <!-- the content to be displayed if the given input are not valid -->
+<% else %>
+  <% if @result.empty? %>
+    <h3>There are no solutions for the given input</h3>   <!-- the content to be displayed if there are no solutions for the given input -->
+  <% else %>
+  <h3>The Unique solution for the given Input are:</h3>   <!-- the content to be displayed if there are solutions for the given input -->
+  <% @result.each do |res| %>       
+    <%= res %><br />
+  <% end %>
+  <% end %>
+<% end %>

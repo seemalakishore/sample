@@ -1,0 +1,3 @@
+#the file which renders the output to the div defined to display the result
+
+$("#result").html("<%= j render 'result' %>");

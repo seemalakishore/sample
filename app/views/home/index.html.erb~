@@ -1,0 +1,9 @@
+<h2>Simple Form</h2>
+<!-- A simple form to take the inputs -->
+<%= form_tag home_index_path, :method => :get, :remote => true do %>
+  <%= text_field_tag "n_value", "", :placeholder => "n value", :value => params[:n_value] %> <!-- input field to take the n value -->
+  <%= text_field_tag "k_value", "", :placeholder => "k value", :value => params[:k_value] %> <!-- input field to take the k value -->
+  <%= submit_tag 'Results' %>
+<% end %>
+
+<div id="result"></div>
